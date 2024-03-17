@@ -1,22 +1,22 @@
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
-    filesystem = {
-      group_empty_dirs = true, -- when true, empty folders will be grouped together
-    },
+    priority = 100,
     window = {
+      width = 30,
       mappings = {
-        ["<space>"] = "none",
-        ["<S-r>"] = "rename", -- Rename
-        ["o"] = {
-          command = "open",
-          nowait = true,
-        },
+        ["<space>"] = false,
+        ["<S-r>"] = "refresh", -- Rename
+        o = "open",
+        -- O = "system_open",
+        -- l = "child_or_open",
       },
     },
-    keys = {
-      { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files<MY>" },
-      { "<leader>ft", "<cmd>Telescope todo-comments<cr>", desc = "Find Todo<MY>" },
+    filesystem = {
+      group_empty_dirs = true, -- when true, empty folders will be grouped together
+      hijack_netrw_behavior = "open_current",
+      use_libuv_file_watcher = true,
+      follow_current_file = { enabled = true }, -- when true, the cursor will be on the current file
     },
   },
 }
