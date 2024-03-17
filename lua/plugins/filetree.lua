@@ -36,8 +36,8 @@ return {
       },
       window = {
         mappings = {
-          ["<C-l>"] = "refresh",
-          ["<C-r>"] = "rename", -- Rename
+          -- ["<C-l>"] = "refresh",
+          ["<S-r>"] = "refresh", -- Rename
           -- ["R"] = "copy", -- To mimic nnn duplicate (C-R)
           --
           ["o"] = {
