@@ -21,7 +21,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
 
     -- NOTE: java config
-    { import = "lazyvim.plugins.extras.lang.java" },
     { import = "lazyvim.plugins.extras.dap.core" },
 
     --NOTE: Another
