@@ -18,6 +18,7 @@ return {
         "scss",
         "sql",
         "lua",
+        "kotlin",
       },
 
       -- matchup = {
