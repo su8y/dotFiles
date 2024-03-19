@@ -12,9 +12,12 @@ return {
         "go",
         "http",
         "java",
+        "vimdoc",
         "javascript",
+        "typescript",
         "scss",
         "sql",
+        "lua",
       },
 
       -- matchup = {
