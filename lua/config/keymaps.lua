@@ -10,8 +10,9 @@ keymap.del("n", "<C-w>")
 keymap.set("n", "dw", 'vb"_d')
 keymap.set("n", "<C-a>", "gg<S-v>G")
 keymap.set("n", "te", ":tabedit<Return>")
-keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
+
+-- keymap.set("n", "<tab>", ":tabnext<Return>", opts)
+-- keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
 
 -- keymap.set("n", "<leader>i", function()
 --   require("myfunc.lsp").toggleInlayHints()
