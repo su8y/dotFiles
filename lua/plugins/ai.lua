@@ -10,14 +10,20 @@ return {
           auto_refresh = true,
         },
         suggestion = {
+          enble = true,
           auto_trigger = true,
+          debounce = 75,
           keymap = {
             accept = "<C-CR>",
+            acept_word = "<M-.>",
+            acept_line = "<M-,>",
+            prev = "<M-[>",
+            next = "<M-]>",
           },
         },
       })
     end,
-  }, -- or github/copilot.vim
+  },
   {
     "CopilotC-Nvim/CopilotChat.nvim",
     branch = "canary",
@@ -97,6 +103,31 @@ return {
         "<leader>ccf",
         "<cmd>CopilotChatFixDiagnostic<cr>", -- Get a fix for the diagnostic message under the cursor.
         desc = "CopilotChat - Fix diagnostic",
+        mode = { "v", "n" },
+      },
+
+      {
+        "<leader>cce",
+        "<cmd>CopilotChatExplain<cr>", -- Get a fix for the diagnostic message under the cursor.
+        desc = "CopilotChat - Explain code",
+        mode = { "v", "n" },
+      },
+      {
+        "<leader>cco",
+        "<cmd>CopilotChatOptimize<cr>", -- Get a fix for the diagnostic message under the cursor.
+        desc = "CopilotChat - Optimize code",
+        mode = { "v", "n" },
+      },
+      {
+        "<leader>ccd",
+        "<cmd>CopilotChatDocs<cr>", -- Get a fix for the diagnostic message under the cursor.
+        desc = "CopilotChat - Docs code",
+        mode = { "v", "n" },
+      },
+      {
+        "<leader>cct",
+        "<cmd>CopilotChatTest<cr>", -- Get a fix for the diagnostic message under the cursor.
+        desc = "CopilotChat - Test code",
         mode = { "v", "n" },
       },
       {
