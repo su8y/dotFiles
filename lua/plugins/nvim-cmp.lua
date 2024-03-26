@@ -3,8 +3,8 @@ return {
   opts = function(_, opts)
     local cmp = require("cmp")
     opts.mapping = cmp.mapping.preset.insert(vim.tbl_deep_extend("force", opts.mapping, {
-      ["<CR>"] = cmp.mapping.confirm({ select = false }),
-      ["<S-CR>"] = cmp.mapping.confirm({ select = false, behavior = cmp.ConfirmBehavior.Replace }),
+      ["<CR>"] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert }),
+      ["<C-y>"] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace }),
       ["<C-N>"] = cmp.mapping.select_next_item({ select = false, behavior = cmp.SelectBehavior.Select }),
       ["<C-P>"] = cmp.mapping.select_prev_item({ select = false, behavior = cmp.SelectBehavior.Select }),
     }))

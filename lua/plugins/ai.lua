@@ -4,6 +4,20 @@ return {
     cmd = "Copilot",
     event = "InsertEnter",
     config = function()
+      local copilotSug = require("copilot.suggestion")
+      vim.keymap.set("i", "<M-Down>", function()
+        copilotSug.next()
+      end, { silent = true })
+      vim.keymap.set("i", "<M-Up>", function()
+        copilotSug.prev()
+      end, { silent = true })
+      vim.keymap.set("i", "<M-Right>", function()
+        copilotSug.accept_word()
+      end, { silent = true })
+      vim.keymap.set("i", "<M-S-Right>", function()
+        copilotSug.accept_line()
+      end, { silent = true })
+
       require("copilot").setup({
         panel = {
           enabled = true,
@@ -15,10 +29,6 @@ return {
           debounce = 75,
           keymap = {
             accept = "<C-CR>",
-            acept_word = "<M-.>",
-            acept_line = "<M-,>",
-            prev = "<M-[>",
-            next = "<M-]>",
           },
         },
       })
